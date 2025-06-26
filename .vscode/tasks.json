@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Sass",
+      "type": "shell",
+      "command": "npm run build:sass",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Watch Sass",
+      "type": "shell",
+      "command": "npm run watch:sass",
+      "isBackground": true,
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Watch HTML",
+      "type": "shell",
+      "command": "npm run watch:html",
+      "isBackground": true,
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}
