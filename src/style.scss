@@ -1,10 +1,41 @@
-$primary-color: #3498db;
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  color: red;
+@font-face {
+  font-family: "Digital-7";
+  src: url("./digital-7.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-h1 {
-  color: $primary-color;
+@font-face {
+  font-family: "Digital-7 Mono";
+  src: url("./digital-7 (mono).ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    background: #1b244a;
+    display: flex;
+    justify-content: space-around;
+}
+.score {
+    background: #080001;
+    font-family: "Digital-7 Mono", sans-serif;
+    color: #F94F6D;
+    font-size: 100px;
+}
+
+h3 {
+    color: white;
+}
+.score-digit{
+  font-family: "Doto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings:
+    "ROND" 0;
 }
