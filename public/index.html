@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Basketball Scoreboard</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-  <h1>Basketball Scoreboard</h1>
-      <body>
-        <div class="container">
-            <div class="home-score">
-                <h3>HOME</h3>
-                <p class="score">0</p>
-            </div>
-            <div class="away-score">
-                <h3>GUEST</h3>
-                <p class="score">0</p>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basketball Scoreboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="container">
+      <div class="home-score score">
+        <h3>Home</h3>
+        <p class="digit">0</p>
+        <div class="points">
+          <button class="one-point">+1</button>
+          <button class="two-points">+2</button>
+          <button class="three-points">+3</button>
         </div>
-        <script src="index.js"></script>
-    </body>
+      </div>
+      <div class="guest-score score">
+        <h3>Guest</h3>
+        <p class="digit">0</p>
+        <div class="points">
+          <button class="one-point">+1</button>
+          <button class="two-points">+2</button>
+          <button class="three-points">+3</button>
+        </div>
+      </div>
+    </section>
+  </body>
   <script src="../src/index.js"></script>
-</body>
 </html>
+
+<!-- STRECTCH GOALS
+ 
+1 - Add a 'new game' button that resets the scores to 0.
+2 - Highlight the leader
+3 - Change the desgin
+
+-->

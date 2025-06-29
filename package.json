@@ -3,12 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build:sass": "sass src/style.scss public/style.css",
-    "watch:sass": "sass --watch src/style.scss:public/style.css",
-    "watch:html": "onchange 'public/index.html' -- npm run reload:html || true",
-    "reload:html": "echo 'HTML changed.'",
+    "build:css": "sass src/style.scss public/style.css",
+    "watch:css": "sass --watch src/style.scss:public/style.css",
     "serve": "live-server public",
-    "dev": "concurrently \"npm run watch:sass\" \"npm run serve\""
+    "dev": "concurrently \"npm run watch:css\" \"npm run serve\""
   },
   "keywords": [],
   "author": "",
