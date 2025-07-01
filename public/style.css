@@ -1,18 +1,5 @@
-@font-face {
-  font-family: "Digital-7";
-  src: url("./digital-7.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Digital-7 Mono";
-  src: url("./digital-7 (mono).ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
 body {
   margin: 0;
-  min-height: 100vh;
 }
 
 .container {
@@ -29,40 +16,31 @@ body {
 .score h3 {
   font-family: sans-serif;
   margin-bottom: 12px;
-  text-transform: uppercase;
 }
 
 .digit {
   background: #080001;
   font-family: "Digital-7 Mono", sans-serif;
   color: #F94F6D;
-  font-size: 70px;
-  margin: 0 0 12px;
+  font-size: 100px;
+  margin: 0;
   text-align: center;
-  padding: 0 20px;
+  padding: 0;
   border-radius: 3px;
-}
-
-button {
-  background: transparent;
-  border: 1px solid rgba(220, 220, 220, 0.692);
-  color: rgba(220, 220, 220, 0.692);
-  border-radius: 3px;
-  padding: 4px 8px;
-  font-family: "Digital-7 Mono", sans-serif;
-
+  margin-bottom: 12px;
 }
 
 h3 {
   color: white;
 }
 
-.score-digit {
-  font-family: "Doto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-  font-variation-settings: "ROND" 0;
+.points button {
+  background-color: transparent;
+  color: rgb(170, 170, 170);
+  border: 1px solid rgb(170, 170, 170);
+  border-radius: 3px;
+  font-size: 20px;
+  padding: 4px 12px;
 }
 
 /*# sourceMappingURL=style.css.map */

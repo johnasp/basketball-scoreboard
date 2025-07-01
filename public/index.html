@@ -5,36 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Basketball Scoreboard</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="icon" href="data:," /> <!-- Empty favicon to avoid default icon -->
   </head>
   <body>
     <section class="container">
       <div class="home-score score">
         <h3>Home</h3>
-        <p class="digit">0</p>
+        <p id="home-digit" class="digit">0</p>
         <div class="points">
-          <button class="one-point">+1</button>
-          <button class="two-points">+2</button>
-          <button class="three-points">+3</button>
+          <button type="button" id="home-one" onclick="homeAddOne()">+1</button>
+          <button type="button" id="home-two" onclick="homeAddTwo()">+2</button>
+          <button type="button" id="home-three" onclick="homeAddThree()">+3</button>
         </div>
       </div>
       <div class="guest-score score">
         <h3>Guest</h3>
-        <p class="digit">0</p>
+        <p id="guest-digit" class="digit">0</p>
         <div class="points">
-          <button class="one-point">+1</button>
-          <button class="two-points">+2</button>
-          <button class="three-points">+3</button>
+          <button type="button" id="guest-one" onclick="guestAddOne()">+1</button>
+          <button type="button" id="guest-two" onclick="guestAddTwo()">+2</button>
+          <button type="button" id="guest-three" onclick="guestAddThree()">+3</button>
         </div>
       </div>
     </section>
   </body>
-  <script src="../src/index.js"></script>
+  <script src="index.js"></script>
 </html>
 
 <!-- STRECTCH GOALS
