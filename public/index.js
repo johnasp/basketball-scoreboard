@@ -1,38 +1,45 @@
 
-let homeDigit = document.getElementById('home-digit');
-let guestDigit = document.getElementById('guest-digit');
+// File: src/index.js
 
-function homeAddOne() {
-   console.log('Home team adds one point');
-}
-function homeAddTwo() {
-   console.log('Home team adds two points');
-}
-function homeAddThree() {
-   console.log('Home team adds three points');
-}
-function guestAddOne() {
-   console.log('Guest team adds one point');
-}
-function guestAddTwo() {
-   console.log('Guest team adds two points');
-}
-function guestAddThree() {
-   console.log('Guest team adds three points');
-}
+// Get references to the score digit elements               
+let homeDigitEl = document.getElementById('home-digit');
+let guestDigitEl = document.getElementById('guest-digit');
 
+// Convert the text content of the elements to numbers for calculations
+let homeDigitValue = Number(homeDigitEl.textContent);
+let guestDigitValue = Number(guestDigitEl.textContent);
+
+// Get references to the buttons for incrementing scores
 let homeOneBtn = document.getElementById('home-one');
 let homeTwoBtn = document.getElementById('home-two');
 let homeThreeBtn = document.getElementById('home-three');
-
 let guestOneBtn = document.getElementById('guest-one');  
 let guestTwoBtn = document.getElementById('guest-two');
 let guestThreeBtn = document.getElementById('guest-three');
 
-console.log(homeOneBtn);
-console.log(homeTwoBtn);
-console.log(homeThreeBtn);
-console.log(guestOneBtn);
-console.log(guestTwoBtn);
-console.log(guestThreeBtn);
+// Functions to increment the home and guest scores
+function homeAddOne() {
+   homeDigitValue ++
+   homeDigitEl.textContent = homeDigitValue;
+}
+function homeAddTwo() {
+   homeDigitValue += 2;
+   homeDigitEl.textContent = homeDigitValue;
+}
+function homeAddThree() {
+   homeDigitValue += 3;
+   homeDigitEl.textContent = homeDigitValue;
+}
+function guestAddOne() {
+   guestDigitValue ++;
+   guestDigitEl.textContent = guestDigitValue;
+}
+function guestAddTwo() {
+   guestDigitValue += 2;
+   guestDigitEl.textContent = guestDigitValue;
+}
+function guestAddThree() {
+   guestDigitValue += 3;
+   guestDigitEl.textContent = guestDigitValue;
+}
 
