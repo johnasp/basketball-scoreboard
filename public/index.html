@@ -8,23 +8,27 @@
     <link rel="icon" href="data:," /> <!-- Empty favicon to avoid default icon -->
   </head>
   <body>
+          <h1>Basketball Scoreboard</h1>
+          <button type="button" id="btn-new-game" onclick="resetScores()">New game</button>
     <section class="container">
+
       <div class="home-score score">
-        <h3>Home</h3>
-        <p id="home-digit" class="digit">0</p>
+
+        <h3>Home 👑</h3>
+Í        <p id="home-digit" class="digit">0</p>
         <div class="points">
-          <button type="button" id="home-one" onclick="homeAddOne()">+1</button>
-          <button type="button" id="home-two" onclick="homeAddTwo()">+2</button>
-          <button type="button" id="home-three" onclick="homeAddThree()">+3</button>
+          <button type="button" id="btn-home-one" onclick="homeAddOne()">+1</button>
+          <button type="button" id="btn-home-two" onclick="homeAddTwo()">+2</button>
+          <button type="button" id="btn-home-three" onclick="homeAddThree()">+3</button>
         </div>
       </div>
       <div class="guest-score score">
         <h3>Guest</h3>
         <p id="guest-digit" class="digit">0</p>
         <div class="points">
-          <button type="button" id="guest-one" onclick="guestAddOne()">+1</button>
-          <button type="button" id="guest-two" onclick="guestAddTwo()">+2</button>
-          <button type="button" id="guest-three" onclick="guestAddThree()">+3</button>
+          <button type="button" id="btn-guest-one" onclick="guestAddOne()">+1</button>
+          <button type="button" id="btn-guest-two" onclick="guestAddTwo()">+2</button>
+          <button type="button" id="btn-guest-three" onclick="guestAddThree()">+3</button>
         </div>
       </div>
     </section>

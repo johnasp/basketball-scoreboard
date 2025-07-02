@@ -9,13 +9,15 @@ let guestDigitEl = document.getElementById('guest-digit');
 let homeDigitValue = Number(homeDigitEl.textContent);
 let guestDigitValue = Number(guestDigitEl.textContent);
 
-// Get references to the buttons for incrementing scores
-let homeOneBtn = document.getElementById('home-one');
-let homeTwoBtn = document.getElementById('home-two');
-let homeThreeBtn = document.getElementById('home-three');
-let guestOneBtn = document.getElementById('guest-one');  
-let guestTwoBtn = document.getElementById('guest-two');
-let guestThreeBtn = document.getElementById('guest-three');
+let newGameBtn = document.getElementById('btn-new-game');
+
+function resetScores() {
+   homeDigitValue = 0;
+   guestDigitValue = 0;
+   homeDigitEl.textContent = homeDigitValue;
+   guestDigitEl.textContent = guestDigitValue;
+   console.log(homeDigitValue, guestDigitValue);
+}
 
 // Functions to increment the home and guest scores
 function homeAddOne() {
