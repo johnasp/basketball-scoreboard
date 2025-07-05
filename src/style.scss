@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Digital-7 Mono";
+  src: url("digital-7.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
     margin: 0;
@@ -20,7 +26,6 @@ body {
   border-radius: 3px;
   cursor: pointer;
   transition: background 0.1s, transform 0.1s;
-
   &:active {
     background-color: #d13a54;
     transform: scale(0.97);
@@ -39,7 +44,7 @@ body {
 }
 .digit {
     background: #080001;
-    font-family: "Digital-7 Mono", sans-serif;
+    font-family: "Digital-7 Mono", Arial, Helvetica, sans-serif;
     color: #F94F6D;
     font-size: 100px;
     margin: 0;
