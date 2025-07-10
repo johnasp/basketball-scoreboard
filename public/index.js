@@ -7,6 +7,8 @@ let guestDigitEl = document.getElementById('guest-digit');
 let homeTitleEl = document.getElementById('home-title');
 let guestTitleEl = document.getElementById('guest-title');
 
+let scoresIsTiedEl = document.getElementById('scores-tied');
+
 // Convert the text content of the elements to numbers for calculations
 let homeDigitValue = Number(homeDigitEl.textContent);
 let guestDigitValue = Number(guestDigitEl.textContent);

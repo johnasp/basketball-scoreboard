@@ -6,17 +6,83 @@
 }
 body {
   margin: 0;
-}
-
-.container {
   background: #1b244a;
   justify-content: space-around;
   align-items: center;
   min-height: 100vh;
-  display: flex;
 }
 
-#btn-new-game {
+header {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.info-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 20px;
+}
+.info-board #scores-tied {
+  color: yellow;
+  background: #080001;
+  padding: 6px 12px;
+  display: inline-block;
+}
+
+.score-board {
+  display: flex;
+  border: 1px solid #F94F6D;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+.score-board .score-box {
+  text-align: center;
+}
+.score-board .score-box h3 {
+  font-family: sans-serif;
+  margin-bottom: 12px;
+  font-size: 36px;
+  text-transform: uppercase;
+  color: white;
+  margin-top: 0;
+}
+.score-board .score-box .digit {
+  background: #080001;
+  font-family: "Digital-7 Mono", Arial, Helvetica, sans-serif;
+  color: #F94F6D;
+  font-size: 200px;
+  margin: 0;
+  text-align: center;
+  border-radius: 3px;
+  margin-bottom: 30px;
+  min-width: 1em;
+}
+.score-board .points-btn-group button {
+  background-color: transparent;
+  color: rgb(170, 170, 170);
+  border: 1px solid rgb(170, 170, 170);
+  border-radius: 3px;
+  font-size: 28px;
+  padding: 4px 12px;
+  cursor: pointer;
+  transition: background 0.1s, transform 0.1s;
+}
+.score-board .points-btn-group button:active {
+  background-color: rgba(170, 170, 170, 0.15);
+  transform: scale(0.96);
+}
+
+footer {
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
+footer #btn-new-game {
   background-color: #F94F6D;
   color: white;
   border: none;
@@ -26,48 +92,9 @@ body {
   cursor: pointer;
   transition: background 0.1s, transform 0.1s;
 }
-#btn-new-game:active {
+footer #btn-new-game:active {
   background-color: #d13a54;
   transform: scale(0.97);
-}
-
-.score {
-  text-align: center;
-}
-.score h3 {
-  font-family: sans-serif;
-  margin-bottom: 12px;
-  font-size: 36px;
-  text-transform: uppercase;
-  color: white;
-  margin-top: 0;
-}
-
-.digit {
-  background: #080001;
-  font-family: "Digital-7 Mono", Arial, Helvetica, sans-serif;
-  color: #F94F6D;
-  font-size: 100px;
-  margin: 0;
-  text-align: center;
-  padding: 0 24px;
-  border-radius: 3px;
-  margin-bottom: 12px;
-}
-
-button {
-  background-color: transparent;
-  color: rgb(170, 170, 170);
-  border: 1px solid rgb(170, 170, 170);
-  border-radius: 3px;
-  font-size: 20px;
-  padding: 4px 12px;
-  cursor: pointer;
-  transition: background 0.1s, transform 0.1s;
-}
-button:active {
-  background-color: rgba(170, 170, 170, 0.15);
-  transform: scale(0.96);
 }
 
 /*# sourceMappingURL=style.css.map */

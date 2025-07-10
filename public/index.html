@@ -1,37 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Basketball Scoreboard</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="data:," /> <!-- Empty favicon to avoid default icon -->
+    <link rel="icon" href="data:," />
+    <!-- Empty favicon to avoid default icon -->
   </head>
   <body>
-          <h1>Basketball Scoreboard</h1>
-          <button type="button" id="btn-new-game" onclick="resetScores()">New game</button>
-    <section class="container">
+    <header>
+      <h1>Basketball Scoreboard</h1>
+    </header>
 
-      <div class="home-score score">
+    <div class="info-board">
+      <h2 id="scores-tied">Scores are tied</h2>
+    </div>
 
+    <section class="score-board">
+      <div class="home-score score-box">
         <h3 id="home-title">Home</h3>
-Í        <p id="home-digit" class="digit">0</p>
-        <div class="points">
-          <button type="button" id="btn-home-one" onclick="homeAddOne()">+1</button>
-          <button type="button" id="btn-home-two" onclick="homeAddTwo()">+2</button>
-          <button type="button" id="btn-home-three" onclick="homeAddThree()">+3</button>
+        <p id="home-digit" class="digit">0</p>
+        <div class="points-btn-group">
+          <button type="button" id="btn-home-one" onclick="homeAddOne()">
+            +1
+          </button>
+          <button type="button" id="btn-home-two" onclick="homeAddTwo()">
+            +2
+          </button>
+          <button type="button" id="btn-home-three" onclick="homeAddThree()">
+            +3
+          </button>
         </div>
       </div>
-      <div class="guest-score score">
+
+      <div class="guest-score score-box">
         <h3 id="guest-title">Guest</h3>
         <p id="guest-digit" class="digit">0</p>
-        <div class="points">
-          <button type="button" id="btn-guest-one" onclick="guestAddOne()">+1</button>
-          <button type="button" id="btn-guest-two" onclick="guestAddTwo()">+2</button>
-          <button type="button" id="btn-guest-three" onclick="guestAddThree()">+3</button>
+        <div class="points-btn-group">
+          <button type="button" id="btn-guest-one" onclick="guestAddOne()">
+            +1
+          </button>
+          <button type="button" id="btn-guest-two" onclick="guestAddTwo()">
+            +2
+          </button>
+          <button type="button" id="btn-guest-three" onclick="guestAddThree()">
+            +3
+          </button>
         </div>
       </div>
     </section>
+
+    <footer>
+      <button type="button" id="btn-new-game" onclick="resetScores()">
+        New game
+      </button>
+    </footer>
   </body>
   <script src="index.js"></script>
 </html>

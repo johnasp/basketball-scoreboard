@@ -6,7 +6,8 @@
     "build:css": "sass src/style.scss public/style.css",
     "watch:css": "sass --watch src/style.scss:public/style.css",
     "serve": "live-server public",
-    "dev": "concurrently \"npm run watch:css\" \"npm run serve\""
+    "format": "prettier --write \"public/**/*.html\" \"src/**/*.scss\"",
+    "dev": "concurrently \"npm run watch:css\" \"npm run serve\" && npm run format"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
     "concurrently": "^7.6.0",
     "live-server": "^1.2.2",
     "onchange": "^7.1.0",
+    "prettier": "^3.6.2",
     "sass": "^1.89.2"
   }
 }
