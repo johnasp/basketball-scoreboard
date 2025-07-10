@@ -10,11 +10,11 @@ body {
   justify-content: space-around;
   align-items: center;
   min-height: 100vh;
+  color: white;
 }
 
 header {
   text-align: center;
-  color: white;
   margin-bottom: 20px;
 }
 
@@ -23,7 +23,6 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
   margin-bottom: 20px;
 }
 .info-board #scores-tied {
@@ -35,7 +34,7 @@ header {
 
 .score-board {
   display: flex;
-  border: 1px solid #F94F6D;
+  border: 1px solid #f94f6d;
   flex-direction: row;
   justify-content: center;
   gap: 20px;
@@ -54,13 +53,17 @@ header {
 .score-board .score-box .digit {
   background: #080001;
   font-family: "Digital-7 Mono", Arial, Helvetica, sans-serif;
-  color: #F94F6D;
+  color: #f94f6d;
   font-size: 200px;
   margin: 0;
   text-align: center;
   border-radius: 3px;
   margin-bottom: 30px;
   min-width: 1em;
+}
+.score-board .points-btn-group {
+  display: flex;
+  gap: 12px;
 }
 .score-board .points-btn-group button {
   background-color: transparent;
@@ -79,12 +82,10 @@ header {
 
 footer {
   text-align: center;
-  color: white;
   margin-top: 20px;
 }
 footer #btn-new-game {
-  background-color: #F94F6D;
-  color: white;
+  background-color: #f94f6d;
   border: none;
   padding: 12px 24px;
   font-size: 20px;

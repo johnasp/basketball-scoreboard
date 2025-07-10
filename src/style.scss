@@ -11,10 +11,10 @@ body {
   justify-content: space-around;
   align-items: center;
   min-height: 100vh;
+  color: white;
 }
 header {
   text-align: center;
-  color: white;
   margin-bottom: 20px;
 }
 .info-board {
@@ -22,7 +22,6 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
   margin-bottom: 20px;
   #scores-tied {
     color: yellow;
@@ -60,6 +59,8 @@ header {
     }
   }
   .points-btn-group {
+    display: flex;
+    gap: 12px;
     button {
       background-color: transparent;
       color: rgb(170, 170, 170);
@@ -81,11 +82,9 @@ header {
 
 footer {
   text-align: center;
-  color: white;
   margin-top: 20px;
   #btn-new-game {
     background-color: #f94f6d;
-    color: white;
     border: none;
     padding: 12px 24px;
     font-size: 20px;

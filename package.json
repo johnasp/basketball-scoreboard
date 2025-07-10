@@ -7,7 +7,7 @@
     "watch:css": "sass --watch src/style.scss:public/style.css",
     "serve": "live-server public",
     "format": "prettier --write \"public/**/*.html\" \"src/**/*.scss\"",
-    "dev": "concurrently \"npm run watch:css\" \"npm run serve\" && npm run format"
+    "start": "concurrently \"npm run watch:css\" \"npm run serve\" "
   },
   "keywords": [],
   "author": "",
