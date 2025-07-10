@@ -11,6 +11,7 @@ body {
   align-items: center;
   min-height: 100vh;
   color: white;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 header {
@@ -18,26 +19,17 @@ header {
   margin-bottom: 20px;
 }
 
-.info-board {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-.info-board #scores-tied {
-  color: yellow;
-  background: #080001;
-  padding: 6px 12px;
-  display: inline-block;
-}
-
 .score-board {
   display: flex;
-  border: 1px solid #f94f6d;
   flex-direction: row;
   justify-content: center;
-  gap: 20px;
+  gap: 100px;
+  margin-bottom: 40px;
+}
+.score-board .leader {
+  min-height: 80px;
+  font-size: 50px;
+  margin: 0;
 }
 .score-board .score-box {
   text-align: center;
@@ -85,16 +77,16 @@ footer {
   margin-top: 20px;
 }
 footer #btn-new-game {
-  background-color: #f94f6d;
+  background-color: #14df69;
   border: none;
   padding: 12px 24px;
-  font-size: 20px;
+  font-size: 24px;
   border-radius: 3px;
   cursor: pointer;
   transition: background 0.1s, transform 0.1s;
 }
 footer #btn-new-game:active {
-  background-color: #d13a54;
+  background-color: #0ccb5b;
   transform: scale(0.97);
 }
 

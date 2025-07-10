@@ -4,8 +4,7 @@
 let homeDigitEl = document.getElementById('home-digit');
 let guestDigitEl = document.getElementById('guest-digit');
 
-let homeTitleEl = document.getElementById('home-title');
-let guestTitleEl = document.getElementById('guest-title');
+
 
 let scoresIsTiedEl = document.getElementById('scores-tied');
 
@@ -23,19 +22,22 @@ function resetScores() {
    console.log(homeDigitValue, guestDigitValue);
 }
 
+// Check who's leading (or drawing) and add crown to leader
+let homeTitleEl = document.getElementById('home-title');
+let guestTitleEl = document.getElementById('guest-title');
+
 function checkLeader(){
+   // Clear crowns before assigning
+   homeTitleEl.textContent = '';
+   guestTitleEl.textContent = '';
    if (homeDigitValue > guestDigitValue) {
-      guestTitleEl.textContent = 'Guest'
-      homeTitleEl.textContent = 'Home 👑'
-   }
-   if (guestDigitValue > homeDigitValue) {
-      guestTitleEl.textContent = 'Guest'
-      guestTitleEl.textContent = 'Guest 👑'
+      homeTitleEl.textContent = '👑';
+   } else if (guestDigitValue > homeDigitValue) {
+      guestTitleEl.textContent = '👑';
    }
    else if (guestDigitValue === homeDigitValue) {
-      guestTitleEl.textContent = 'Guest'
-      homeTitleEl.textContent = 'Home'
-      console.log('Its a draw')
+      homeTitleEl.textContent = '👔';
+      guestTitleEl.textContent = '👔';
    }
 }
 
