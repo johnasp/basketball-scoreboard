@@ -4,64 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Basketball Scoreboard</title>
+
+    <!-- Google font for headings / buttons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="data:," />
-    <!-- Empty favicon to avoid default icon -->
   </head>
+
   <body>
     <header>
-      <h1>Basketball Scoreboard</h1>
+      <h1>Basketball Scoreboard</h1>
     </header>
 
-    <section class="score-board">
-      <div class="home-score score-box">
-        <p id="home-title" class="leader"></p>
+    <main class="score-board">
+      <!-- HOME -->
+      <div class="score-box" id="home-box">
+        <span id="home-title" class="leader"></span>
         <h3>Home</h3>
         <p id="home-digit" class="digit">0</p>
         <div class="points-btn-group">
-          <button type="button" id="btn-home-one" onclick="homeAddOne()">
-            +1
-          </button>
-          <button type="button" id="btn-home-two" onclick="homeAddTwo()">
-            +2
-          </button>
-          <button type="button" id="btn-home-three" onclick="homeAddThree()">
-            +3
-          </button>
+          <button onclick="homeAddOne()">+1</button>
+          <button onclick="homeAddTwo()">+2</button>
+          <button onclick="homeAddThree()">+3</button>
         </div>
       </div>
 
-      <div class="guest-score score-box">
-        <p id="guest-title" class="leader"></p>
+      <!-- GUEST -->
+      <div class="score-box" id="guest-box">
+        <span id="guest-title" class="leader"></span>
         <h3>Guest</h3>
         <p id="guest-digit" class="digit">0</p>
         <div class="points-btn-group">
-          <button type="button" id="btn-guest-one" onclick="guestAddOne()">
-            +1
-          </button>
-          <button type="button" id="btn-guest-two" onclick="guestAddTwo()">
-            +2
-          </button>
-          <button type="button" id="btn-guest-three" onclick="guestAddThree()">
-            +3
-          </button>
+          <button onclick="guestAddOne()">+1</button>
+          <button onclick="guestAddTwo()">+2</button>
+          <button onclick="guestAddThree()">+3</button>
         </div>
       </div>
-    </section>
+    </main>
 
     <footer>
-      <button type="button" id="btn-new-game" onclick="resetScores()">
-        Reset Scores
-      </button>
+      <button id="btn-new-game" onclick="resetScores()">Reset Scores</button>
     </footer>
+
+    <script src="index.js"></script>
   </body>
-  <script src="index.js"></script>
 </html>
-
-<!-- STRECTCH GOALS
- 
-1 - Add a 'new game' button that resets the scores to 0.
-2 - Highlight the leader
-3 - Change the desgin
-
--->
