@@ -18,8 +18,7 @@ body {
   margin: 0;
   height: 100%;
 }
-html {
-}
+
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   color: #fff;
@@ -30,7 +29,30 @@ body {
   justify-content: space-between;
   backdrop-filter: brightness(0.85);
   padding: 1rem;
-  font-size: clamp(1rem, 2vw, 2rem);
+}
+
+button {
+  background: #ff8c00;
+  border: none;
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  padding: 0.3em 1em;
+  border-radius: 8px;
+  font-size: 1rem;
+  @media (min-width: 960px) {
+    font-size: 1.6rem;
+  }
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.35);
+  transition:
+    transform 0.1s,
+    filter 0.15s;
+  &:hover {
+    filter: brightness(1.15);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+  cursor: pointer;
 }
 
 /* ----------   HEADER   ---------- */
@@ -40,7 +62,7 @@ header {
     font-family: 'Orbitron', sans-serif;
     letter-spacing: 1px;
     margin: 0.5rem 0 1.5rem;
-
+    font-size: clamp(1.6rem, 2vw, 2rem);
     text-align: center;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
   }
@@ -54,6 +76,7 @@ header {
   justify-content: center;
   width: 100%;
   max-width: 1200px;
+  position: relative;
 }
 
 .score-box {
@@ -70,6 +93,7 @@ header {
     text-transform: uppercase;
     margin: 0.2rem 0 1rem;
     margin-bottom: 0;
+    font-size: clamp(2rem, 2vw, 3rem);
   }
 }
 
@@ -84,8 +108,11 @@ header {
 .leader {
   display: block;
   line-height: 1;
-  height: 2.5rem;
-  margin-bottom: 0.25rem;
+  font-size: 4rem;
+  position: absolute;
+  top: -0.7em;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Large red digits */
@@ -95,9 +122,9 @@ header {
   text-shadow: 0 0 20px rgba(249, 79, 109, 0.75);
   background: #080001;
   border-radius: 6px;
-  margin: 0 0 1rem;
-  padding: 0.2rem 0.6rem;
-  font-size: 180px;
+  margin: 0;
+  padding: 0;
+  font-size: clamp(8rem, 10vw, 20rem);
 }
 
 /* ----------   FOOTER   ---------- */
@@ -105,24 +132,10 @@ header {
 footer {
   margin: 1.5rem 0;
 }
-
-button {
-  background: #ff8c00;
-  border: none;
-  color: #fff;
-  font-family: 'Orbitron', sans-serif;
-  font-size: inherit;
-  padding: 0.4em 1em;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.35);
-  transition:
-    transform 0.1s,
-    filter 0.15s;
-  &:hover {
-    filter: brightness(1.15);
-  }
-  &:active {
-    transform: scale(0.95);
-  }
+.credits {
+  text-transform: uppercase;
+  position: absolute;
+  font-size: 16px;
+  right: 12px;
+  bottom: 12px;
 }
