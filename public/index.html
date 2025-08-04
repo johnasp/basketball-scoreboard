@@ -2,11 +2,18 @@
 <html lang="en">
   <head>
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MBSHHTDR');</script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-MBSHHTDR');
+    </script>
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,8 +30,14 @@
 
   <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBSHHTDR"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MBSHHTDR"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header>
       <h1>Basketball Scoreboard</h1>
@@ -39,7 +52,9 @@
         <div class="points-btn-group">
           <button id="btn-home-one-point" onclick="homeAddOne()">+1</button>
           <button id="btn-home-two-points" onclick="homeAddTwo()">+2</button>
-          <button id="btn-home-three-points" onclick="homeAddThree()">+3</button>
+          <button id="btn-home-three-points" onclick="homeAddThree()">
+            +3
+          </button>
         </div>
       </div>
 
@@ -51,7 +66,9 @@
         <div class="points-btn-group">
           <button id="btn-guest-one-point" onclick="guestAddOne()">+1</button>
           <button id="btn-guest-two-points" onclick="guestAddTwo()">+2</button>
-          <button id="btn-guest-three-points" onclick="guestAddThree()">+3</button>
+          <button id="btn-guest-three-points" onclick="guestAddThree()">
+            +3
+          </button>
         </div>
       </div>
     </main>
@@ -62,5 +79,54 @@
     </footer>
 
     <script src="index.js"></script>
+
+    <!-- 🍪 Cookie Banner -->
+<div id="cookie-banner" style="position:fixed;bottom:0;left:0;right:0;background:#000000;border-top:1px solid #ccc;padding:1rem;z-index:9999;box-shadow:0 -2px 5px rgba(0,0,0,0.1);display:none;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+  <p style="margin:0;font-size:18px;flex:1 1 250px;">We use cookies to improve your experience and deliver personalized ads and analytics. You can accept or reject their use below.</p>
+  <div style="display:flex;gap:10px;">
+    <button onclick="acceptCookies()" style="padding:0.5rem 1rem;">Accept</button>
+    <button onclick="declineCookies()" style="padding:0.5rem 1rem;">Decline</button>
+  </div>
+</div>
+
+<script>
+  // Show banner if no decision made
+  if (!localStorage.getItem('cookieConsent')) {
+    document.getElementById('cookie-banner').style.display = 'block';
+  }
+
+  function acceptCookies() {
+    localStorage.setItem('cookieConsent', 'accepted');
+    updateConsent('granted');
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+
+  function declineCookies() {
+    localStorage.setItem('cookieConsent', 'denied');
+    updateConsent('denied');
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+
+  function updateConsent(state) {
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        ad_storage: state,
+        analytics_storage: state,
+        ad_user_data: state,
+        ad_personalization: state
+      });
+    } else {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'default_consent_set',
+        ad_storage: state,
+        analytics_storage: state,
+        ad_user_data: state,
+        ad_personalization: state
+      });
+    }
+  }
+</script>
+
   </body>
 </html>
